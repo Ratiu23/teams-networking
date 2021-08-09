@@ -13,6 +13,7 @@
         <input type="text" id="search" placeholder="Search">
         <label for="search"></label>
     </div>
+    <form onsubmit="return submitTeam();">
     <table  border="1" id="list">
         <thead>
             <tr>
@@ -27,28 +28,15 @@
         </tbody>
           <tfoot>
             <tr>
-              <td>
-                     <section>
-                    <from action="">
-					<input type="text" required="none" name="Enter group" placeholder="Enter group">
-				    </from></section>
-                </td>
-              <td>
-                    <section>
-                    <from action="">
-					<input type="text" required="none" name="Enter members" placeholder="Enter Members">
-				    </from></section>
-                </td>
-              <td>
-                <section>
-                    <from action="">
-					<input type="text" required="none" name="Enter project name" placeholder="Enter project name">
-				    </from></section>
-              </td>
-              <td><button>Save</button></td>
-            </tr>
+              <td><input type="text" required name="group" placeholder="group"></td>
+              <td><input type="text" required name="members" placeholder="members"></td>
+              <td><input type="text" required name="name" placeholder="name"></td>
+              <td><input type="text" required name="url" placeholder="url"></td>
+              <td><button type="submit">Save</button></td>
+            </tr>  
           </tfoot>
     </table>
+    </form>
   <script src="functions.js"></script>
 </body>
 </html>
