@@ -1,6 +1,6 @@
 let allTeams = [];
 function loadTeams() {
-    fetch("http://localhost:3000/teams-json")
+    fetch("http://192.168.1.219:3000/teams-json")
         .then(r => r.json())
         .then(teams =>{
             console.warn("teams", teams)
@@ -42,7 +42,7 @@ function getTeamValues() {
 }
 
 function saveTeam(team) {
-    fetch("http://localhost:3000/teams-json/create", {
+    fetch("http://192.168.1.219:3000/teams-json/create", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -53,7 +53,8 @@ function saveTeam(team) {
         .then(status => {
             console.warn('status after add', status);
             if (status.success) {
-                window.location.reload();
+                loadTeams();
+                document.querySelector("form").reset();
             }
         })
 }
