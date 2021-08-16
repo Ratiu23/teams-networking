@@ -13,7 +13,7 @@
         <input type="text" id="search" placeholder="Search">
         <label for="search"></label>
     </div>
-    <form onsubmit="return submitTeam();">
+    <form onsubmit="submitTeam(); return false;">
     <table  border="1" id="list">
         <thead>
             <tr>
@@ -28,7 +28,7 @@
         </tbody>
           <tfoot>
             <tr>
-              <td><input type="text" required name="group" placeholder="group"></td>
+              <td><input type="text" required name="promotion" placeholder="group"></td>
               <td><input type="text" required name="members" placeholder="members"></td>
               <td><input type="text" required name="name" placeholder="name"></td>
               <td><input type="text" required name="url" placeholder="url"></td>
