@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams Networking</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Teams Networking</h1>
@@ -13,7 +14,7 @@
         <input type="text" id="search" placeholder="Search">
         <label for="search"></label>
     </div>
-    <form onsubmit="submitTeam(); return false;">
+    <form onsubmit="submitTeam(); return false; onreset="editId = 0">
     <table  border="1" id="list">
         <thead>
             <tr>
@@ -32,7 +33,10 @@
               <td><input type="text" required name="members" placeholder="members"></td>
               <td><input type="text" required name="name" placeholder="name"></td>
               <td><input type="text" required name="url" placeholder="url"></td>
-              <td><button type="submit">Save</button></td>
+              <td>
+                <button type="submit"><i class="far fa-save"></i></button>
+                <button type="reset"><i class="fas fa-undo"></i></button>
+              </td>
             </tr>  
           </tfoot>
     </table>
