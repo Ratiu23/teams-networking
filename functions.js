@@ -139,8 +139,10 @@ document.querySelector('#list tbody').addEventListener("click", e => {
 document.getElementById("search").addEventListener("input", e => {
     const text = e.target.value.toLowerCase();
     const filtered = allTeams.filter(t => {
-        //console.info(t.members, t.members.includes(text))
-        return t.members.toLowerCase().includes(text);
+        return t.members.toLowerCase().includes(text) || 
+          t.name.toLowerCase().includes(text) ||
+          t.promotion.toLowerCase().includes(text) ||
+          t.url.toLowerCase().includes(text);
     })
     displayTeams(filtered);
 });
